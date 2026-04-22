@@ -101,63 +101,86 @@ footer {
       margin-left: 15px;
     }
   }
-
 }
+
+@media (max-width: 800px) {
+  footer {
+    small {
+      display: block;
+      float: none;
+      margin-bottom: 1em;
+    }
+    ul {
+      float: none;
+      padding: 0;
+      li {
+        float: none;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
 /* miscellaneous */
 
-  .debug_dump {
-    clear: both;
-    float: left;
-    width: 100%;
-    margin-top: 45px;
-  }
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+}
 
-  aside {
-    section.user_info {
-      margin-top: 20px;
+/* sidebar */
+
+aside {
+  section.user_info {
+    margin-top: 20px;
+  }
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
     }
-    section {
-      padding: 10px 0;
-      margin-top: 20px;
-      &:first-child {
-        border: 0;
-        padding-top: 0;
-      }
-      span {
-        display: block;
-        margin-bottom: 3px;
-        line-height: 1;
-      }
-      h1 {
-        font-size: 1.4em;
-        text-align: left;
-        letter-spacing: -1px;
-        margin-bottom: 3px;
-        margin-top: 0px;
-      }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
     }
   }
+}
 
-  .gravatar {
-    float: left;
-    margin-right: 10px;
-  }
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
 
-  .gravatar_edit {
-    margin-top: 15px;
-  }
+.gravatar_edit {
+  margin-top: 15px;
+}
 
-  input, textarea {
-    border: 1px solid #bbb;
-    width: 100%;
-    margin-bottom: 15px;
+/* forms */
+
+input, textarea {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
   @include box_sizing;
-  }
+}
 
-  input {
-    height: auto !important;
-  }
-  #error_explanation {
+input {
+  height: auto !important;
+}
+
+#error_explanation {
   color: red;
   ul {
     color: red;
@@ -170,4 +193,10 @@ footer {
   .form-control {
     color: $state-danger-text;
   }
+}
+
+/* Dropdown menu */
+
+.dropdown-menu.active {
+  display: block;
 }
